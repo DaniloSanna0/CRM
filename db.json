@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "email": "nifyboqi@mailinator.com",
+      "password": "$2a$10$92xSKrDgMNG6CLUh3YjzDejW3moR73AwwAWf8K72MmJMeRovVCHtS",
+      "nome": "Error quo sed libero",
+      "cognome": "Voluptas Nam commodo",
+      "date": "4/5/2022 11:7",
+      "id": 1
+    },
+    {
+      "email": "email@email.it",
+      "password": "$2a$10$8qMO.4yPP5O2/cTFsP3v2uSwTjX02TmGVmayxyiovsusdckv7cPjK",
+      "nome": "Danilo",
+      "cognome": "Sanna",
+      "date": "4/5/2022 11:7",
+      "id": 2
+    },
+    {
+      "email": "gijyxoly@mailinator.com",
+      "password": "$2a$10$MhQ5qKQva29nlRVUjo18sej/Lyr2F6nh45X.8khZcV6PdrjfR05kK",
+      "nome": "Velit provident con",
+      "cognome": "Aut eius amet sit ",
+      "date": "4/5/2022 11:19",
+      "id": 3
+    },
+    {
+      "email": "q@q",
+      "password": "$2a$10$aUkngcPASI95cvpx9KzQc.OnwxlPRC0n8s6XX6YNdgecY5wkGuNoe",
+      "nome": "Danilo",
+      "cognome": "Sanna",
+      "date": "4/5/2022 11:24",
+      "id": 4
+    },
+    {
+      "email": "tujuderilu@mailinator.com",
+      "password": "$2a$10$yuETkyVh0dSzbr/Y/6EdROZmfRegZHWvL4k5OpacHBnL3pg0kJFKy",
+      "nome": "Velit et laborum Ea",
+      "cognome": "Vel molestias et off",
+      "date": "4/5/2022 14:56",
+      "id": 5
+    },
+    {
+      "email": "hiryb@mailinator.com",
+      "password": "$2a$10$iORBbbIVBiT1fsXOpOcLj.MaL6rjYfik/Ve7NcDIOesPjk2SOXVhO",
+      "nome": "Wooten",
+      "cognome": "Calhoun",
+      "date": "4/5/2022 15:46",
+      "id": 6
+    },
+    {
+      "email": "tepu@mailinator.com",
+      "password": "$2a$10$R8WfrZ.LEKqF5d0FXsX8yeApOwp0JTQyJ8CkyG65qn5fP/rUHdi5m",
+      "nome": "Herman",
+      "cognome": "Contreras",
+      "date": "4/5/2022 16:7",
+      "id": 7
+    },
+    {
+      "email": "vowy@mailinator.com",
+      "password": "$2a$10$fTxB6UIEQKbEDJz7bjnVxuGekfAaVqcuHSpETYRlOkykJmy8u6/.6",
+      "nome": "Quos molestiae sint ",
+      "cognome": "Placeat odit amet ",
+      "date": "5/5/2022 17:30",
+      "id": 8
+    },
+    {
+      "email": "xasoz@mailinator.com",
+      "password": "$2a$10$zGuELUn/A/PvKjVem3lmAOOsLU.uK0EtJvsCrB25RXUW5VQQ3FGBa",
+      "nome": "Sunt dolore quo ex q",
+      "cognome": "Neque fugit consect",
+      "date": "5/5/2022 17:30",
+      "id": 9
+    }
+  ]
+}

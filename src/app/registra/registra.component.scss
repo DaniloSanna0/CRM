@@ -1,0 +1,22 @@
+.example-full-width{
+    display: block;
+    width: 200px;
+    margin:0
+}
+
+table{
+    margin: 0 auto;
+
+}
+td{
+    padding: 70px;
+    text-align: center;
+    border: solid #888888 1px;
+    border-radius: 10px;
+}
+td:last-child{
+    box-shadow: 10px 10px 8px #888888;
+}
+td:first-child{
+    box-shadow: 10px 10px 8px #888888;
+}
