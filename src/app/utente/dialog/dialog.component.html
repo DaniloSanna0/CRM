@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Modifica utente</h1>
+<div mat-dialog-content *ngIf="data">
+  Vuoi modificare l'utente {{data.nome}}?
+</div>
+<form (ngSubmit)="aggiornaPost()" [formGroup]="form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput name="email" placeholder="email" formControlName="email">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" placeholder="password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input matInput type="name" name="nome" placeholder="nome" formControlName="nome">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Cognome</mat-label>
+          <input matInput type="surname" name="cognome" placeholder="cognome" formControlName="cognome">
+        </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Modifica</button>
+    <span mat-dialog-actions>
+      <button mat-button mat-dialog-close>Chiudi</button>
+      <!-- <button mat-button mat-dialog-close cdkFocusInitial>Ok</button> -->
+    </span>
+</form>

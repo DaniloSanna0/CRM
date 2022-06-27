@@ -11,13 +11,17 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { DialogComponent } from './dialog/dialog.component';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
 
 @NgModule({
   declarations: [
-    UtenteComponent
+    UtenteComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTableModule,
     MatIconModule,
     MatPaginatorModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class UtenteModule { }

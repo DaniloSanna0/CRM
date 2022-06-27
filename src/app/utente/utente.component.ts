@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Utente } from '../utente';
 import { UtentiService } from '../utenti.service';
+import { DialogComponent } from './dialog/dialog.component';
 
 export interface PeriodicElement {
   name: string;
@@ -8,6 +10,7 @@ export interface PeriodicElement {
   weight: number;
   symbol: string;
 }
+
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -32,18 +35,22 @@ export class UtenteComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
   
-  constructor(private u:UtentiService){}
-
-  users:Utente[]=[]
+  constructor(private u:UtentiService, private dialog: MatDialog){}
   
-  visualizzaUtenti(){
-    this.u.getUsers().subscribe(res => {this.users=res.reverse()})
-  }
-
-  ngOnInit(): void {
-    this.visualizzaUtenti()
-}
+  openDialog(): void {
+      this.dialog.open(DialogComponent ,{
+        data: this.users,
+          width: '500px'
+        });
+    }
+      
+      users:Utente[]=[]
+      
+      visualizzaUtenti(){
+        this.u.getUsers().subscribe(res => {this.users=res.reverse()})
+      }
+      ngOnInit(): void {
+        this.visualizzaUtenti()
+      }
   
-
-
 }

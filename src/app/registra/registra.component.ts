@@ -47,7 +47,7 @@ export class RegistraComponent implements OnInit {
     //   password: '',
     //   cognome: ''
     // }
-    let nuovo = new ClassePrincipale(this.form.value.email, this.form.value.password, this.form.value.nome, this.form.value.cognome)
+    let nuovo = new ClassePrincipale(this.form.value.email, this.form.value.email, this.form.value.password, this.form.value.nome, this.form.value.cognome)
 
 
     this.users.push(nuovo)

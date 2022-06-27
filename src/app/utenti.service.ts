@@ -18,4 +18,8 @@ export class UtentiService {
   getUser(id:number){
     return this.http.get<Utente>(`${this.ApiUrlUser}/${id}`)
   }
+
+  updateUser(user:Utente, id:number):any{
+    return this.http.patch(`${this.ApiUrlUser}/${id}`, user)
+  }
 }
