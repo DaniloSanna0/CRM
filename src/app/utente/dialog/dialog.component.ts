@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Utente } from 'src/app/utente';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
 import { UtentiService } from 'src/app/utenti.service';
+import { User } from './user';
 
 @Component({
   selector: 'app-dialog',
@@ -10,26 +10,25 @@ import { UtentiService } from 'src/app/utenti.service';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-  // idUtente!: number;
-  // idUpdate!: number;
-  form!:FormGroup;
-  updateUser!: Utente;
+  users:User[] = []
+  user:User = new User();
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data:any, private u:UtentiService, ) {}
-  ngOnInit(): void {
-  }
 
-  // visualizzaUtente(id:number){
-    
-  //   this.idUtente = id
-  //   this.u.getUser(this.idUpdate).subscribe(res=> console.log(res))
-  // }
+  constructor(private u:UtentiService) {}
+  ngOnInit(): void {
+    // this.u.getUsers().subscribe(users => {
+    //   this.users = users
+    // })
+  }
   
-  loading= false
-  aggiornaPost(){
-    this.loading=true
-    this.u.updateUser(this.form.value, this.updateUser!.id).subscribe((res:Utente)=>{this.loading=false;
-    })
-}
+  
+ 
+  aggiornaUtente(){
+    this.u.updateUser(this.user).subscribe((res:User) => {let index = this.users.findIndex(user => user.id == res.id)
+      this.users.splice(index,1,res)})
+    }
+
+
+  
 }

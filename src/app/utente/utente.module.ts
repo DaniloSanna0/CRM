@@ -13,6 +13,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 
 
@@ -35,7 +36,8 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSortModule
   ]
 })
 export class UtenteModule { }

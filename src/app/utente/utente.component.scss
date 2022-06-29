@@ -5,15 +5,21 @@
     width: 100%;
   }
   
-//   .mat-form-field {
-//     font-size: 14px;
-//     width: 100%;
-//   }
+  .mat-form-field {
+    display: block;
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+  }
   
-//   td, th {
-//     width: 25%;
-//   }
+  // td, th {
+  //   width: 25%;
+  // }
   
 button {
   margin-right: 8px;
+}
+.mat-elevation-z8{
+  width: 90%;
+  margin: 0 auto;
 }

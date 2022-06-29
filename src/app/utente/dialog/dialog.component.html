@@ -1,11 +1,15 @@
 <h1 mat-dialog-title>Modifica utente</h1>
-<div mat-dialog-content *ngIf="data">
-  Vuoi modificare l'utente {{data.nome}}?
+<div mat-dialog-content *ngIf="user">
+  Vuoi modificare l'utente {{user.nome}}?
 </div>
-<form (ngSubmit)="aggiornaPost()" [formGroup]="form">
+<form>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>{{user.id}}id</mat-label>
+        <input matInput type="id" name="id" [value]="user.id" [(ngModel)]="user.id" [disabled]="true">
+      </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput name="email" placeholder="email" formControlName="email">
+        <mat-label>{{user.email}}email</mat-label>
+        <input type="email" matInput name="email" placeholder="email" [(ngModel)]="user.email">
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
           Please enter a valid email address
         </mat-error>
@@ -15,17 +19,17 @@
     </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Password</mat-label>
-          <input matInput type="password" name="password" placeholder="password" formControlName="password">
+          <input matInput type="password" name="password" placeholder="password" [(ngModel)]="user.password">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input matInput type="name" name="nome" placeholder="nome" formControlName="nome">
+          <input matInput type="name" name="nome" placeholder="nome" [(ngModel)]="user.nome">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" formControlName="cognome">
+          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="user.cognome">
         </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Modifica</button>
+    <button mat-raised-button color="primary" (click)="aggiornaUtente()">Modifica</button>
     <span mat-dialog-actions>
       <button mat-button mat-dialog-close>Chiudi</button>
       <!-- <button mat-button mat-dialog-close cdkFocusInitial>Ok</button> -->

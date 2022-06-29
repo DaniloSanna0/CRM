@@ -1,9 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Utente } from '../utente';
 import { UtentiService } from '../utenti.service';
 import { DialogComponent } from './dialog/dialog.component';
-
 
 
 @Component({
@@ -13,23 +15,62 @@ import { DialogComponent } from './dialog/dialog.component';
 })
 export class UtenteComponent implements OnInit {
   displayedColumns: string[] = ['id', 'email', 'nome', 'cognome','pulsante'];
+  users:Utente[]=[]
+  dataSource!: MatTableDataSource<Utente>;
 
-  constructor(private u:UtentiService, private dialog: MatDialog){}
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private u:UtentiService, private dialog: MatDialog){
+  }
   
   openDialog(): void {
-      this.dialog.open(DialogComponent ,{
-        data: this.users,
-          width: '500px'
-        });
+    this.dialog.open(DialogComponent ,{
+      data: this.users,
+      width: '500px'
+    });
+  }
+
+    visualizzaUtenti(){
+      this.u.getUsers().subscribe(res => {
+        this.dataSource= new MatTableDataSource(res)
+        this.users = res
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      })
+
     }
+
+    ngOnInit(): void {
+      this.visualizzaUtenti();
+    }
+    
+    delte(id:number){
       
-      users:Utente[]=[]
-      
-      visualizzaUtenti(){
-        this.u.getUsers().subscribe(res => {this.users=res.reverse()})
-      }
-      ngOnInit(): void {
-        this.visualizzaUtenti()
-      }
+      this.u.deleteUser(id)
+      .subscribe(res => {
+        this.users = this.users.filter(c => c.id != id)
+        this.dataSource= new MatTableDataSource(this.users)
+      })
+    }
+
+
+    applyFilter(event: Event) {
+      const filterValue = (event.target as HTMLInputElement).value;
+      this.dataSource.filter = filterValue.trim().toLowerCase();
   
-}
+      if (this.dataSource.paginator) {
+        this.dataSource.paginator.firstPage();
+      }
+    }
+
+    // ngAfterViewInit() {
+    //   console.log(this.paginator);
+    //   console.log(this.dataSource);
+      
+    //   this.dataSource.paginator = this.paginator;
+    //   this.dataSource.sort = this.sort;
+    // }
+
+
+  }
