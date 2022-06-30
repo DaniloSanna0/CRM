@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/login.service';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 
 
 @Component({
@@ -10,9 +10,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  userLogged!:boolean;
   constructor(private log:LoginService, private route:Router) { }
 
   ngOnInit(): void {
+    this.route.events.subscribe(res => {
+      if(res instanceof NavigationStart){
+        this.userLogged = this.log.isUserLoggedIn();
+      }
+    });
   }
 
   logout(){

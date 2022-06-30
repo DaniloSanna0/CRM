@@ -10,23 +10,29 @@ import { tap } from 'rxjs';
 export class LoginService {
 
   ApiUrlUser:string = 'http://localhost:4201/login'
+  tokenItemKey:string = 'jwt'
+  userInfoKey:string = 'loggedUser'
 
   constructor(private http: HttpClient) { }
   
-    saveUser(t:string){
-      localStorage.setItem("token", t)
-    }
+  saveUser(token:string){
+    localStorage.setItem(this.tokenItemKey,token)
+  }
 
   login(data:{email:string; password:string}) {
     return this.http.post<Auth>(this.ApiUrlUser+"login", data).pipe(
       tap((data)=>{
-        localStorage.setItem("user", JSON.stringify(data))
+        localStorage.setItem(this.userInfoKey, JSON.stringify(data))
       }),
     )
   }
+
   logout() {
-    localStorage.removeItem("user")
+    localStorage.removeItem(this.tokenItemKey)
+    localStorage.removeItem(this.userInfoKey)
   }
 
-
+  isUserLoggedIn():boolean{
+    return localStorage.getItem(this.tokenItemKey) != null
+  }
 }

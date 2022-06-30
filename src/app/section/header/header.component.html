@@ -8,7 +8,7 @@
       <li><a href="#">Contatta</a></li>
       </ul> -->
     </li>
-    <li><a [routerLink]="['/registra']">Registrati</a>
+    <li><a [routerLink]="['/registra']" *ngIf="!userLogged">Registrati</a>
     </li>
   </ul>
 </header>

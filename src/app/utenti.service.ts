@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from './utente/dialog/user';
+import { Utente } from './utente';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +12,15 @@ export class UtentiService {
   ApiUrlUser:string = 'http://localhost:4201/users'
 
   getUsers(){
-    return this.http.get<User[]>(this.ApiUrlUser)
+    return this.http.get<Utente[]>(this.ApiUrlUser)
   }
 
   // getUser(id:number){
   //   return this.http.get<Utente>(`${this.ApiUrlUser}/${id}`)
   // }
 
-  updateUser(user:User){
-    return this.http.patch<User>(this.ApiUrlUser + '/' + user.id, user)
+  updateUser(user:Utente){
+    return this.http.patch<Utente>(this.ApiUrlUser + '/' + user.id, user)
   }
 
   deleteUser(id:number){
