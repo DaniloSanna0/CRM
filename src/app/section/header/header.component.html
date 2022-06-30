@@ -1,13 +1,15 @@
 <header>
   <ul>
     <!-- <li><a [routerLink]="['/']">Home</a></li> -->
-    <li><a [routerLink]="['/utente']">Utente</a>
+    <li><a [routerLink]="['/utente']" *ngIf="userLogged">Utente</a>
       <!-- <ul class="dropdown">
       <li><a href="#">Fatture</a></li>
       <li><a href="#">Appuntamenti</a></li>
       <li><a href="#">Contatta</a></li>
       </ul> -->
     </li>
+    <li><a [routerLink]="['/clienti']" *ngIf="userLogged">Clienti</a>
+    <li><a [routerLink]="['/fatture']" *ngIf="userLogged">Fatture</a>
     <li><a [routerLink]="['/registra']" *ngIf="!userLogged">Registrati</a>
     </li>
   </ul>

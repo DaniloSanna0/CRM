@@ -29,9 +29,8 @@
           <mat-label>Cognome</mat-label>
           <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="user.cognome">
         </mat-form-field>
-    <button mat-raised-button color="primary" (click)="aggiornaUtente()">Modifica</button>
-    <span mat-dialog-actions>
+        <span mat-dialog-actions>
+      <button mat-raised-button color="primary" (click)="aggiornaUtente(user)">Modifica</button>
       <button mat-button mat-dialog-close>Chiudi</button>
-      <!-- <button mat-button mat-dialog-close cdkFocusInitial>Ok</button> -->
     </span>
 </form>

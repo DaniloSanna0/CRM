@@ -24,9 +24,11 @@ export class UtenteComponent implements OnInit {
   constructor(private u:UtentiService, private dialog: MatDialog){
   }
   
-  openDialog(): void {
+  openDialog(user:Utente): void {
+    console.log(user);
+
     this.dialog.open(DialogComponent ,{
-      data: this.users,
+      data: user,
       width: '500px'
     });
   }
