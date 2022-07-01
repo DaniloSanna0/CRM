@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Utente } from './utente';
+import { Utente } from '../interface/utente';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,8 @@ export class UtentiService {
   constructor(private http : HttpClient) { }
 
   ApiUrlUser:string = 'http://localhost:4201/users'
+
+  
 
   getUsers(){
     return this.http.get<Utente[]>(this.ApiUrlUser)

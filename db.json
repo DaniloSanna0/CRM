@@ -9,10 +9,10 @@
       "id": 3
     },
     {
-      "email": "pubanup@mailinator.com",
-      "password": "$2a$10$cinA6gl/tNsWiclPZ79zT.oBK1dIBX.oFwl1fe3.DAE45YqdYJC.y",
-      "nome": "Aliquip harum ad lab",
-      "cognome": "Architecto dicta deb",
+      "email": "anup@maiator.com",
+      "password": "$2a$10$x7DB2gQwmljvaEwhdm2dReRk3CWcVvgU8oBzSFmB3KL/dP48WxXOy",
+      "nome": "uip harum ad lab",
+      "cognome": "Architecto diceb",
       "date": "5/5/2022 17:30",
       "id": 9
     },
@@ -25,16 +25,8 @@
       "id": 14
     },
     {
-      "email": "zefa@mailinator.com",
-      "password": "$2a$10$y0t8p/yyiIr17X9xU78vHut4eC3xIR35e2DIqm/uhC1gbCBww5Fmy",
-      "nome": "Ut architecto nulla ",
-      "cognome": "Officiis et quia est",
-      "date": "3/5/2022 16:39",
-      "id": 16
-    },
-    {
-      "email": "cicimo@mailinator.com",
-      "password": "$2a$10$k9p01L8RWXv8/7el/zcbNumnkCj2iqWIyGnyU8.7205xZ/XwwSrMi",
+      "email": "cicimo@mar.com",
+      "password": "$2a$10$jYN/nntOiGhRD0ElBPvEseC2ZRgFXQQhUFfBTe8udmyDQe6TWr082",
       "nome": "Ut libero facere et ",
       "cognome": "Cupidatat ad repudia",
       "date": "3/5/2022 17:6",
@@ -71,14 +63,6 @@
       "cognome": "Perspiciatis consec",
       "date": "3/5/2022 18:17",
       "id": 22
-    },
-    {
-      "email": "letywa@mailinator.com",
-      "password": "$2a$10$CVqKXUW/kntXer.x.57Jue3Y8Aedl2S74xBi6EuR6PoJemt6YDQQG",
-      "nome": "Dolore sunt iusto v",
-      "cognome": "Eaque autem quod pla",
-      "date": "3/5/2022 18:17",
-      "id": 23
     },
     {
       "email": "lesozo@mailinator.com",
@@ -159,6 +143,32 @@
       "cognome": "Sanna",
       "date": "4/5/2022 12:36",
       "id": 33
+    }
+  ],
+  "clienti": [
+    {
+      "email": "ddsaq@qqwq",
+      "password": "$2a$10$yi.3UwHtwra58nrLNP2.7e6GZV1/JKkF.YDQWVpjW3O/nnJwDvJCC",
+      "nome": "Danilo",
+      "cognome": "Sanna",
+      "date": "4/5/2022 12:36",
+      "id": 1
+    },
+    {
+      "id": 4,
+      "email": "pucedazy@mailinator.com",
+      "password": "xovicipy",
+      "nome": "Et explicabo Dolore",
+      "cognome": "Iusto neque obcaecat"
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
     }
   ]
 }

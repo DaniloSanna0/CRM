@@ -3,8 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Utente } from '../utente';
-import { UtentiService } from '../utenti.service';
+import { Utente } from '../interface/utente';
+import { UtentiService } from '../service/utenti.service';
 import { DialogComponent } from './dialog/dialog.component';
 
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Auth } from './auth';
+import { Auth } from '../interface/auth';
 import { tap } from 'rxjs';
 
 

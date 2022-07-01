@@ -1,1 +1,51 @@
-<p>clienti works!</p>
+
+
+<button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea Cliente</button>
+
+<mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+  
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+    
+      <ng-container matColumnDef="id" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+        <td mat-cell *matCellDef="let clienti"> {{clienti.id}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let clienti"> {{clienti.email}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+        <td mat-cell *matCellDef="let clienti"> {{clienti.nome}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="cognome">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cognome </th>
+        <td mat-cell *matCellDef="let clienti"> {{clienti.cognome}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="pulsante">
+        <th mat-header-cell *matHeaderCellDef> Azioni </th>
+        <td mat-cell *matCellDef="let clienti">
+          <button mat-raised-button mat-mini-fab color="primary" (click)="openDialog(clienti)"><mat-icon>edit</mat-icon></button>
+          <button mat-raised-button mat-mini-fab color="warn" (click)="delte(clienti.id)"><mat-icon>delete</mat-icon></button>
+  
+        </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  
+  </div>

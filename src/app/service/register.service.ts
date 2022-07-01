@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Utente } from './utente';
+import { Utente } from '../interface/utente';
 import { tap } from 'rxjs/operators';
-import { Auth } from './auth';
+import { Auth } from '../interface/auth';
 
 
 @Injectable({

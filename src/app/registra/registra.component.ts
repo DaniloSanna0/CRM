@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ClassePrincipale } from '../classe-principale';
-import { LoginService } from '../login.service';
-import { RegisterService } from '../register.service';
-import { Utente } from '../utente';
+import { ClassePrincipale } from '../interface/classe-principale';
+import { LoginService } from '../service/login.service';
+import { RegisterService } from '../service/register.service';
+import { Utente } from '../interface/utente';
 import { Router } from '@angular/router';
 
 
