@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Crea cliente utente</h1>
+<div mat-dialog-content *ngIf="cliente">
+    Crea il cliente {{cliente.nome}}?
+</div>
+<form>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>id</mat-label>
+        <input matInput type="id" name="id" [(ngModel)]="cliente.id" [disabled]="true">
+      </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>email</mat-label>
+        <input type="email" matInput name="email" placeholder="email" [(ngModel)]="cliente.email">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" placeholder="password" [(ngModel)]="cliente.password">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input matInput type="name" name="nome" placeholder="nome" [(ngModel)]="cliente.nome">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Cognome</mat-label>
+          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome">
+        </mat-form-field>
+        <span mat-dialog-actions>
+      <button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea</button>
+      <button mat-button mat-dialog-close>Chiudi</button>
+    </span>
+</form>

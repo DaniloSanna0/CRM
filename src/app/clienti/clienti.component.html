@@ -1,15 +1,16 @@
+<button mat-raised-button color="primary" (click)="openDialog2()">Crea Cliente</button>
+<!-- <button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea Cliente</button> -->
+<!-- createCliente(cliente) -->
 
-
-<button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea Cliente</button>
 
 <mat-form-field appearance="standard">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-  </mat-form-field>
-  
-  
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" matSort>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
   
     
       <ng-container matColumnDef="id" >

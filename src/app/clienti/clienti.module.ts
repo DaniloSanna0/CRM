@@ -13,12 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
+import { Dialog2Component } from './dialog2/dialog2.component';
 
 
 @NgModule({
   declarations: [
     ClientiComponent,
-    DialogComponent
+    DialogComponent,
+    Dialog2Component
   ],
   imports: [
     CommonModule,

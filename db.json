@@ -143,6 +143,22 @@
       "cognome": "Sanna",
       "date": "4/5/2022 12:36",
       "id": 33
+    },
+    {
+      "email": "nigaq@mailinator.com",
+      "password": "$2a$10$72C3oR3DOv792mM/y6oRoOH.CGRPow23ktXmoHIvCcSQvuFfNH5Ky",
+      "nome": "Consequuntur vero cu",
+      "cognome": "Autem veniam dolore",
+      "date": "5/6/2022 18:26",
+      "id": 34
+    },
+    {
+      "email": "juluxaf@mailinator.com",
+      "password": "$2a$10$xIQLp5Gin5WOrcX5KMPQLeJTVaYv9ENZD.5lTwoEc.SdR66vadxp2",
+      "nome": "Ut ipsum aliqua Ea ",
+      "cognome": "Ut praesentium esse",
+      "date": "5/6/2022 18:34",
+      "id": 35
     }
   ],
   "clienti": [
@@ -162,13 +178,46 @@
       "cognome": "Iusto neque obcaecat"
     },
     {
-      "id": 5
+      "id": 5,
+      "email": "ozuvyr@minator.com",
+      "password": "xejezibi",
+      "nome": "gnam exercitation ",
+      "cognome": "Ea est dolor culpa "
     },
     {
-      "id": 7
+      "id": 7,
+      "email": "satun@mailinator.com",
+      "password": "takofawa",
+      "nome": "Dolorum non nihil si",
+      "cognome": "Est voluptas totam "
     },
     {
-      "id": 8
+      "id": 8,
+      "email": "pycytymigy@mailinator.com",
+      "password": "myfidijo",
+      "nome": "Veniam officiis et ",
+      "cognome": "Accusamus quos id al"
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
     }
   ]
 }

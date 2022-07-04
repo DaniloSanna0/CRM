@@ -7,6 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Utente } from '../interface/utente';
 import { ClientiService } from '../service/clienti.service';
 import { DialogComponent } from './dialog/dialog.component';
+import { Dialog2Component } from './dialog2/dialog2.component';
 
 @Component({
   selector: 'app-clienti',
@@ -16,20 +17,26 @@ import { DialogComponent } from './dialog/dialog.component';
 export class ClientiComponent implements OnInit {
   displayedColumns: string[] = ['id', 'email', 'nome', 'cognome','pulsante'];
   clienti:Utente[]=[]
-  cliente!:Utente
   dataSource!: MatTableDataSource<Utente>;
-
+  cliente!:Utente
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   
   constructor(private dialog: MatDialog, private c:ClientiService) { }
 
-  openDialog(user:Utente): void {
-    console.log(user);
+  openDialog(cliente:Utente): void {
+    console.log(cliente);
 
     this.dialog.open(DialogComponent ,{
-      data: user,
+      data: cliente,
+      width: '500px'
+    });
+  }
+
+  openDialog2(): void {
+    console.log();
+    this.dialog.open(Dialog2Component ,{
       width: '500px'
     });
   }
@@ -50,7 +57,6 @@ export class ClientiComponent implements OnInit {
   createCliente(cliente:Utente){
     this.c.createCliente(cliente)
     .subscribe(res => this.clienti)
-
   }
 
   delte(id:number){
@@ -69,6 +75,7 @@ export class ClientiComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+ 
 
 
 }
