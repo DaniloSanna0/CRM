@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Crea cliente utente</h1>
+<h1 mat-dialog-title>Crea cliente</h1>
 <div mat-dialog-content *ngIf="cliente">
     Crea il cliente {{cliente.nome}}?
 </div>
@@ -30,7 +30,7 @@
           <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome">
         </mat-form-field>
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea</button>
+      <button mat-raised-button color="primary" (click)="createCliente()">Crea</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>
 </form>

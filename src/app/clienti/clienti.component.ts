@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CreaCliente } from '../interface/crea-cliente';
 import { Utente } from '../interface/utente';
 import { ClientiService } from '../service/clienti.service';
 import { DialogComponent } from './dialog/dialog.component';
@@ -15,17 +15,17 @@ import { Dialog2Component } from './dialog2/dialog2.component';
   styleUrls: ['./clienti.component.scss']
 })
 export class ClientiComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'email', 'nome', 'cognome','pulsante'];
-  clienti:Utente[]=[]
-  dataSource!: MatTableDataSource<Utente>;
-  cliente!:Utente
+  displayedColumns: string[] = ['id', 'email', 'nome', 'cognome','PIva','pulsante'];
+  clienti:CreaCliente[]=[]
+  dataSource!: MatTableDataSource<CreaCliente>;
+  cliente!:CreaCliente
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   
   constructor(private dialog: MatDialog, private c:ClientiService) { }
 
-  openDialog(cliente:Utente): void {
+  openDialog(cliente:CreaCliente): void {
     console.log(cliente);
 
     this.dialog.open(DialogComponent ,{
@@ -54,7 +54,7 @@ export class ClientiComponent implements OnInit {
     this.visualizzaClienti();
   }
 
-  createCliente(cliente:Utente){
+  createCliente(cliente:CreaCliente){
     this.c.createCliente(cliente)
     .subscribe(res => this.clienti)
   }

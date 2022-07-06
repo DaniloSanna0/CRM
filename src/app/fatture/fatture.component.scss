@@ -1,0 +1,30 @@
+.example-card {
+    max-width: 400px;
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    display: block;
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+button {
+  margin-right: 8px;
+}
+.mat-elevation-z8{
+  width: 90%;
+  margin: 0 auto;
+}
+
+#crea{
+  transform: translateY(-2px);
+  // transform: translate(0px,-2px);
+  margin-left: 5%;
+  background-color: #04AA6D;
+  color: white;
+  border-radius: 5px;
+}

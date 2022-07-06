@@ -159,65 +159,178 @@
       "cognome": "Ut praesentium esse",
       "date": "5/6/2022 18:34",
       "id": 35
+    },
+    {
+      "email": "x@x",
+      "password": "$2a$10$/ib.Ihz9qS5Ta2/UWeWkh.HioOC06/.1rzF1.dVXvQrj5kh3CT56G",
+      "nome": "asadasd",
+      "cognome": "basdasdasda",
+      "date": "1/6/2022 9:36",
+      "id": 36
+    },
+    {
+      "email": "lyculi@mailinator.com",
+      "password": "$2a$10$/HnzJbszB3u7zjyXNd1uR.tT7EZW6zq.tcqrgTr6cduA5j2Lz3vQW",
+      "nome": "Ad veniam et vel ut",
+      "cognome": "Totam consectetur ea",
+      "date": "1/6/2022 9:39",
+      "id": 37
+    },
+    {
+      "email": "gajoxydaf@mailinator.com",
+      "password": "$2a$10$1p5yPhFO/WGE/fiKvK70xe0T2wpXVtqPC5hLN/msaInPxoP5rnmYy",
+      "nome": "Explicabo Est deser",
+      "cognome": "Voluptatem porro te",
+      "date": "1/6/2022 9:39",
+      "id": 38
+    },
+    {
+      "email": "sannadanilo98@gmail.com",
+      "password": "$2a$10$oXP3KSEaGe2HaNdvQfXwTe114oWxZqdmU9tV3ILV5M.QYWKQ5Gn/q",
+      "nome": "friga",
+      "cognome": "gunno",
+      "date": "1/6/2022 9:39",
+      "id": 39
     }
   ],
   "clienti": [
     {
-      "email": "ddsaq@qqwq",
-      "password": "$2a$10$yi.3UwHtwra58nrLNP2.7e6GZV1/JKkF.YDQWVpjW3O/nnJwDvJCC",
-      "nome": "Danilo",
-      "cognome": "Sanna",
-      "date": "4/5/2022 12:36",
+      "email": "hagunacocu@mailinator.com",
+      "password": "wylecory",
+      "nome": "Reiciendis assumenda",
+      "cognome": "Aliqua Do sit est",
+      "date": "1/6/2022 17:35",
+      "PIva": 5216008970,
       "id": 1
     },
     {
-      "id": 4,
-      "email": "pucedazy@mailinator.com",
-      "password": "xovicipy",
-      "nome": "Et explicabo Dolore",
-      "cognome": "Iusto neque obcaecat"
+      "email": "zuqipeg@mailinator.com",
+      "password": "dorobecy",
+      "nome": "Laudantium sapiente",
+      "cognome": "Assumenda iste harum",
+      "date": "1/6/2022 17:35",
+      "PIva": 2157118121,
+      "id": 2
     },
     {
-      "id": 5,
-      "email": "ozuvyr@minator.com",
-      "password": "xejezibi",
-      "nome": "gnam exercitation ",
-      "cognome": "Ea est dolor culpa "
+      "email": "nona@mailinator.com",
+      "password": "vobecesi",
+      "nome": "Doloribus aut sunt o",
+      "cognome": "Elit iusto iure rep",
+      "date": "1/6/2022 17:36",
+      "PIva": 9380356447,
+      "id": 3
     },
     {
-      "id": 7,
-      "email": "satun@mailinator.com",
-      "password": "takofawa",
-      "nome": "Dolorum non nihil si",
-      "cognome": "Est voluptas totam "
+      "email": "gywybu@mailinator.com",
+      "password": "fywafufo",
+      "nome": "Dolore sit fuga Od",
+      "cognome": "Deserunt modi necess",
+      "date": "1/6/2022 17:36",
+      "PIva": 663347321,
+      "id": 4
     },
     {
-      "id": 8,
-      "email": "pycytymigy@mailinator.com",
-      "password": "myfidijo",
-      "nome": "Veniam officiis et ",
-      "cognome": "Accusamus quos id al"
+      "email": "gyhotiti@mailinator.com",
+      "password": "nuqexopo",
+      "nome": "Ex voluptas officiis",
+      "cognome": "Non mollit pariatur",
+      "date": "1/6/2022 17:36",
+      "PIva": 906189642,
+      "id": 5
     },
     {
+      "email": "pafuf@mailinator.com",
+      "password": "tiragyse",
+      "nome": "Sequi nihil optio q",
+      "cognome": "Magna non aliquam no",
+      "date": "1/6/2022 17:36",
+      "PIva": 5388992495,
+      "id": 6
+    },
+    {
+      "email": "revyregij@mailinator.com",
+      "password": "zecuqifu",
+      "nome": "Repudiandae earum et",
+      "cognome": "Proident esse tempo",
+      "date": "1/6/2022 17:36",
+      "PIva": 8188586916,
+      "id": 8
+    },
+    {
+      "email": "puzebyf@mailinator.com",
+      "password": "vixyfypu",
+      "nome": "Velit labore et dolo",
+      "cognome": "Assumenda dolore eaq",
+      "date": "1/6/2022 17:36",
+      "PIva": 3288163317,
       "id": 9
     },
     {
+      "email": "gexazonab@mailinator.com",
+      "password": "pujiveby",
+      "nome": "Esse est ipsum enim ",
+      "cognome": "Nam neque sit maxime",
+      "date": "3/6/2022 15:36",
+      "PIva": 7882162865,
       "id": 10
     },
     {
+      "email": "xolak@mailinator.com",
+      "password": "qygyjubo",
+      "nome": "Possimus quae irure",
+      "cognome": "Magna consequuntur l",
+      "date": "3/6/2022 22:55",
+      "PIva": 3477014519,
       "id": 11
     },
     {
+      "email": "jaqupet@mailinator.com",
+      "password": "sabovawe",
+      "nome": "Modi ad commodi null",
+      "cognome": "Voluptas sunt sed la",
+      "date": "3/6/2022 22:56",
+      "PIva": 4416276420,
       "id": 12
     },
     {
+      "email": "wamyti@mailinator.com",
+      "password": "gudazyce",
+      "nome": "Ut officia accusamus",
+      "cognome": "Voluptatem Do volup",
+      "date": "3/6/2022 22:56",
+      "PIva": 2247912305,
       "id": 13
+    }
+  ],
+  "fatture": [
+    {
+      "data_emissione": "6/7/2022",
+      "cliente": "Harum nulla labore a",
+      "prodotti": "Ab et consequatur v",
+      "scadenza": "1999-08-06",
+      "id": 3
     },
     {
-      "id": 14
+      "data_emissione": "6/7/2022",
+      "scadenza": "2022-07-07",
+      "prodotti": "dsad",
+      "cliente": "0",
+      "id": 4
     },
     {
-      "id": 15
+      "data_emissione": "6/7/2022",
+      "numeroFattura": "DS614775",
+      "prodotti": "Eum voluptatem offi",
+      "scadenza": "2011-02-24",
+      "id": 5
+    }
+  ],
+  "appuntamenti": [
+    {
+      "id": 1,
+      "appuntamento": "Thu Jul 21 2022 00:00:00 GMT+0200",
+      "dataCreazione": "2/6/2022 11:31"
     }
   ]
 }

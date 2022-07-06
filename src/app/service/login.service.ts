@@ -22,7 +22,8 @@ export class LoginService {
   login(data:{email:string; password:string}) {
     return this.http.post<Auth>(this.ApiUrlUser+"login", data).pipe(
       tap((data)=>{
-        localStorage.setItem(this.userInfoKey, JSON.stringify(data))
+        localStorage.setItem(this.userInfoKey, JSON.stringify(data.user))
+        localStorage.setItem(this.tokenItemKey, JSON.stringify(data.accessToken))
       }),
     )
   }
@@ -34,5 +35,9 @@ export class LoginService {
 
   isUserLoggedIn():boolean{
     return localStorage.getItem(this.tokenItemKey) != null
+  }
+
+  getJWT(){
+    return localStorage.getItem(this.tokenItemKey)
   }
 }

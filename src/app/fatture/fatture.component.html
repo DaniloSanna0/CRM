@@ -1,1 +1,53 @@
-<p>fatture works!</p>
+<mat-form-field appearance="standard">
+    <mat-label>Cerca cliente</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+  
+  <button mat-raised-button id="crea" (click)="openDialog2()">Crea Fattura</button>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+    
+      
+        <ng-container matColumnDef="id" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+          <td mat-cell *matCellDef="let fatture"> {{fatture.id}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="numeroFattura">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero Fattura </th>
+          <td mat-cell *matCellDef="let fatture"> {{fatture.numeroFattura}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="prodotti">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> prodotti </th>
+          <td mat-cell *matCellDef="let fatture"> {{fatture.prodotti}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="scadenza">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> scadenza </th>
+          <td mat-cell *matCellDef="let fatture"> {{fatture.scadenza}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="data">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> data emissione</th>
+          <td mat-cell *matCellDef="let fatture"> {{fatture.data_emissione}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="pulsante">
+          <th mat-header-cell *matHeaderCellDef> Azioni </th>
+          <td mat-cell *matCellDef="let fatture">
+            <button mat-raised-button mat-mini-fab color="primary" (click)="openDialog(fatture)"><mat-icon>edit</mat-icon></button>
+            <button mat-raised-button mat-mini-fab color="warn" (click)="delte(fatture.id)"><mat-icon>delete</mat-icon></button>
+    
+          </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    
+    </div>

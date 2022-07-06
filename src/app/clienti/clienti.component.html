@@ -1,13 +1,13 @@
-<button mat-raised-button color="primary" (click)="openDialog2()">Crea Cliente</button>
 <!-- <button mat-raised-button color="primary" (click)="createCliente(cliente)">Crea Cliente</button> -->
 <!-- createCliente(cliente) -->
 
 
 <mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
+  <mat-label>Cerca cliente</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
 </mat-form-field>
 
+<button mat-raised-button id="crea" (click)="openDialog2()">Crea Cliente</button>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
@@ -31,6 +31,11 @@
       <ng-container matColumnDef="cognome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Cognome </th>
         <td mat-cell *matCellDef="let clienti"> {{clienti.cognome}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PIva">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> P.Iva </th>
+        <td mat-cell *matCellDef="let clienti"> {{clienti.PIva}} </td>
       </ng-container>
   
       <ng-container matColumnDef="pulsante">

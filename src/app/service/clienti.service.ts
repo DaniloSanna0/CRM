@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CreaCliente } from '../interface/crea-cliente';
 import { Utente } from '../interface/utente';
 
 @Injectable({
@@ -11,16 +12,16 @@ export class ClientiService {
 
   ApiUrlC:string = 'http://localhost:4201/clienti'
 
-  createCliente(cliente:Utente) {
-    return this.http.post<Utente>(this.ApiUrlC, cliente)
+  createCliente(cliente:CreaCliente) {
+    return this.http.post<CreaCliente>(this.ApiUrlC, cliente)
   }
 
   getClienti(){
-    return this.http.get<Utente[]>(this.ApiUrlC)
+    return this.http.get<CreaCliente[]>(this.ApiUrlC)
   }
 
-  updateClienti(cliente:Utente){
-    return this.http.patch<Utente>(this.ApiUrlC + '/' + cliente.id, cliente)
+  updateClienti(cliente:CreaCliente){
+    return this.http.patch<CreaCliente>(this.ApiUrlC + '/' + cliente.id, cliente)
   }
 
   deleteClienti(id:number){
