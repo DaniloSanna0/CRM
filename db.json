@@ -305,32 +305,68 @@
   ],
   "fatture": [
     {
-      "data_emissione": "6/7/2022",
-      "cliente": "Harum nulla labore a",
-      "prodotti": "Ab et consequatur v",
-      "scadenza": "1999-08-06",
-      "id": 3
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS933948",
+      "IVA": "22%",
+      "prodotti": [
+        2
+      ],
+      "id": 8
     },
     {
-      "data_emissione": "6/7/2022",
-      "scadenza": "2022-07-07",
-      "prodotti": "dsad",
-      "cliente": "0",
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS403547",
+      "IVA": "22%",
+      "prodotti": [
+        3
+      ],
+      "id": 9
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS713286",
+      "IVA": "22%",
+      "clienteId": "4",
+      "id": 10
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS685973",
+      "IVA": "22%",
+      "clienteId": "10",
+      "prodotti": [
+        3
+      ],
+      "scadenza": "2022-07-19",
+      "id": 11
+    }
+  ],
+  "prodotti": [
+    {
+      "id": 1,
+      "nome": "tv",
+      "prezzo": 450
+    },
+    {
+      "id": 2,
+      "nome": "smartphone",
+      "prezzo": 700
+    },
+    {
+      "id": 3,
+      "nome": "pc portatile",
+      "prezzo": 1200
+    },
+    {
+      "nome": "microfono",
+      "prezzo": 20,
       "id": 4
     },
     {
-      "data_emissione": "6/7/2022",
-      "numeroFattura": "DS614775",
-      "prodotti": "Eum voluptatem offi",
-      "scadenza": "2011-02-24",
+      "nome": "cassa",
+      "prezzo": 60,
       "id": 5
     }
   ],
-  "appuntamenti": [
-    {
-      "id": 1,
-      "appuntamento": "Thu Jul 21 2022 00:00:00 GMT+0200",
-      "dataCreazione": "2/6/2022 11:31"
-    }
-  ]
+  "appuntamenti": []
 }

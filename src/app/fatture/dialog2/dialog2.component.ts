@@ -4,9 +4,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CreaCliente } from 'src/app/interface/crea-cliente';
 import { Fattura } from 'src/app/interface/fattura';
 import { FatturaClass } from 'src/app/interface/fattura-class';
+import { Prodotti } from 'src/app/interface/prodotti';
 import { Utente } from 'src/app/interface/utente';
 import { ClientiService } from 'src/app/service/clienti.service';
 import { FattureService } from 'src/app/service/fatture.service';
+import { ProdottiService } from 'src/app/service/prodotti.service';
 
 @Component({
   selector: 'app-dialog2',
@@ -16,15 +18,23 @@ import { FattureService } from 'src/app/service/fatture.service';
 export class Dialog2Component implements OnInit {
   clienti:CreaCliente[] = []
   fatture:FatturaClass[] = []
+  prodotti!:Prodotti[];
+  prodSelezionati:number[] = [];
   fattura:FatturaClass = new FatturaClass() 
   dataSource!: MatTableDataSource<FatturaClass>;
   isNew:boolean = true
 
 
-  constructor(private f:FattureService, private c:ClientiService) { }
+  constructor(
+     private f:FattureService,
+     private c:ClientiService,
+     private p:ProdottiService
+     ) { }
 
   ngOnInit(): void {
-    this.c.getClienti().subscribe(res => this.clienti)
+    this.c.getClienti().subscribe(res => this.clienti = res)
+    this.p.getAll()
+    .subscribe((res:Prodotti[]) => this.prodotti = res)
   }
 
   createCliente(){
