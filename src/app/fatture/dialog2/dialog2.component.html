@@ -3,13 +3,17 @@
     Crea una nuova fattura del cliente {{fattura.numeroFattura}}?
 </div>
 <form>
-      <select 
+  <input type="checkbox" name="pagata" [value]="fattura.pagata" [(ngModel)]="fattura.pagata">
+  <label for="vehicle1"> paga</label>
+
+      <select required
       class="form-control"
       name="customer" [(ngModel)]="fattura.clienteId">
         <option value="">--Seleziona--</option>
         <option *ngFor="let cliente of clienti"
         [value]="cliente.id">{{cliente.nome}}</option>
        </select>
+
       <select
       class="form-control" multiple
       name="prodotti" [(ngModel)]="fattura.prodotti"

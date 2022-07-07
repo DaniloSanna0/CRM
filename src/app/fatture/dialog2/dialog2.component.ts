@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { CreaCliente } from 'src/app/interface/crea-cliente';
-import { Fattura } from 'src/app/interface/fattura';
 import { FatturaClass } from 'src/app/interface/fattura-class';
 import { Prodotti } from 'src/app/interface/prodotti';
 import { Utente } from 'src/app/interface/utente';

@@ -339,6 +339,60 @@
       ],
       "scadenza": "2022-07-19",
       "id": 11
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS236063",
+      "IVA": "22%",
+      "id": 12
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS641033",
+      "IVA": "22%",
+      "pagata": true,
+      "id": 13
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS256946",
+      "IVA": "22%",
+      "id": 14
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS67834",
+      "IVA": "22%",
+      "pagata": false,
+      "id": 15
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS996480",
+      "IVA": "22%",
+      "pagata": false,
+      "id": 16
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS461825",
+      "IVA": "22%",
+      "pagata": true,
+      "id": 17
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS609659",
+      "IVA": "22%",
+      "pagata": true,
+      "id": 18
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS748291",
+      "IVA": "22%",
+      "pagata": false,
+      "id": 19
     }
   ],
   "prodotti": [

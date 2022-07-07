@@ -7,11 +7,13 @@ export class FatturaClass {
     scadenza!:Date;
     data_emissione:string;
     IVA:string;
+    pagata!:boolean
     constructor()
         {
          this.data_emissione = new Date().toLocaleDateString();
          this.numeroFattura = 'DS' + getRandomInt(1000000);
-         this.IVA = "22%"
+         this.IVA = "22%";
+         this.pagata = false;
         }
 
     }

@@ -2,7 +2,6 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { Fattura } from 'src/app/interface/fattura';
 import { FatturaClass } from 'src/app/interface/fattura-class';
 import { FattureService } from 'src/app/service/fatture.service';
 

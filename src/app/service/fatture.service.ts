@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Fattura } from '../interface/fattura';
 import { FatturaClass } from '../interface/fattura-class';
 
 @Injectable({
