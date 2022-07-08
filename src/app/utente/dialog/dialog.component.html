@@ -5,7 +5,7 @@
 <form>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>id</mat-label>
-        <input matInput type="id" name="id" [value]="user.id" [(ngModel)]="user.id" [disabled]="true">
+        <input matInput type="number" name="id" [value]="user.id" [(ngModel)]="user.id" [disabled]="true">
       </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>email</mat-label>
@@ -19,18 +19,19 @@
     </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Password</mat-label>
-          <input matInput type="password" name="password" placeholder="password" [(ngModel)]="user.password">
+          <input matInput type="password" name="password" placeholder="password" minlength="4" [(ngModel)]="user.password">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input matInput type="name" name="nome" placeholder="nome" [(ngModel)]="user.nome">
+          <input matInput type="text" name="nome" placeholder="nome" minlength="3" [(ngModel)]="user.nome">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="user.cognome">
+          <input matInput type="text" name="cognome" placeholder="cognome" [(ngModel)]="user.cognome">
         </mat-form-field>
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="aggiornaUtente(user)">Modifica</button>
+      <button mat-raised-button color="primary" type="submit" (click)="aggiornaUtente(user)"
+      [disabled]="!user.nome || !user.cognome || !user.password || !user.email || user.nome.length < 3 || user.password.length < 4">Modifica</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>
 </form>

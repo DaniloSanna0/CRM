@@ -5,11 +5,11 @@
 <form>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>id</mat-label>
-        <input matInput type="id" name="id" [(ngModel)]="cliente.id" [disabled]="true">
+        <input matInput type="number" name="id" [(ngModel)]="cliente.id" [disabled]="true">
       </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>email</mat-label>
-        <input type="email" matInput name="email" placeholder="email" [(ngModel)]="cliente.email">
+        <input type="email" matInput name="email" placeholder="email" [(ngModel)]="cliente.email" required>
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
           Please enter a valid email address
         </mat-error>
@@ -19,18 +19,36 @@
     </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Password</mat-label>
-          <input matInput type="password" name="password" placeholder="password" [(ngModel)]="cliente.password">
+          <input matInput type="password" name="password" placeholder="password" [(ngModel)]="cliente.password" required>
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input matInput type="name" name="nome" placeholder="nome" [(ngModel)]="cliente.nome">
+          <input matInput type="text" name="nome" placeholder="nome" [(ngModel)]="cliente.nome" required>
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome">
+          <input matInput type="text" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Città</mat-label>
+          <input matInput type="text" name="citta" placeholder="citta" [(ngModel)]="cliente.indirizzo.citta" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Via</mat-label>
+          <input matInput type="text" name="via" placeholder="via" [(ngModel)]="cliente.indirizzo.via" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Civico</mat-label>
+          <input matInput type="number" name="civico" placeholder="civico" [(ngModel)]="cliente.indirizzo.civico" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>CAP</mat-label>
+          <input matInput type="number" name="cap" placeholder="cap" [(ngModel)]="cliente.indirizzo.cap" required>
         </mat-form-field>
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="createCliente()">Crea</button>
+      <button mat-raised-button color="primary" (click)="createCliente()"
+      [disabled]="!cliente.nome || !cliente.cognome || !cliente.password || !cliente.email || cliente.nome.length < 3 || cliente.password.length < 4 
+      || !cliente.indirizzo.citta || !cliente.indirizzo.via || !cliente.indirizzo.civico || !cliente.indirizzo.cap">Crea</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>
 </form>

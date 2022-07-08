@@ -61,7 +61,7 @@ export class RegistraComponent implements OnInit {
       this.srv.login(this.authUser).subscribe((res:any)=>{console.log(res);
         this.srv.saveUser(res.accessToken); 
         this.seiLoggato()
-        if (!this.accedi) {
+        if (res.accessToken) {
           this.router.navigate(['/utente'])
         }
       })

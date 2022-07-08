@@ -5,7 +5,7 @@
 <form>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>id</mat-label>
-        <input matInput type="id" name="id" [value]="cliente.id" [(ngModel)]="cliente.id" [disabled]="true">
+        <input matInput type="number" name="id" [value]="cliente.id" [(ngModel)]="cliente.id" [disabled]="true">
       </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>email</mat-label>
@@ -23,14 +23,32 @@
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input matInput type="name" name="nome" placeholder="nome" [(ngModel)]="cliente.nome">
+          <input matInput type="text" name="nome" placeholder="nome" [(ngModel)]="cliente.nome">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome">
+          <input matInput type="text" name="cognome" placeholder="cognome" [(ngModel)]="cliente.cognome">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Città</mat-label>
+          <input matInput type="text" name="citta" placeholder="citta" [(ngModel)]="cliente.indirizzo.citta">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Via</mat-label>
+          <input matInput type="text" name="via" placeholder="via" [(ngModel)]="cliente.indirizzo.via">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Civico</mat-label>
+          <input matInput type="number" name="civico" placeholder="civico" [(ngModel)]="cliente.indirizzo.civico">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>CAP</mat-label>
+          <input matInput type="number" name="cap" placeholder="cap" [(ngModel)]="cliente.indirizzo.cap">
         </mat-form-field>
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="aggiornaCliente(cliente)">Modifica</button>
+      <button mat-raised-button color="primary" (click)="aggiornaCliente(cliente)"
+      [disabled]="!cliente.nome || !cliente.cognome || !cliente.password || !cliente.email || cliente.nome.length < 3 || cliente.password.length < 4 
+      || !cliente.indirizzo.citta || !cliente.indirizzo.via || !cliente.indirizzo.civico || !cliente.indirizzo.cap">Modifica</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>
 </form>

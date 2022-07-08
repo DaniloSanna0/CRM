@@ -2,8 +2,12 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { CreaCliente } from 'src/app/interface/crea-cliente';
 import { FatturaClass } from 'src/app/interface/fattura-class';
+import { Prodotti } from 'src/app/interface/prodotti';
+import { ClientiService } from 'src/app/service/clienti.service';
 import { FattureService } from 'src/app/service/fatture.service';
+import { ProdottiService } from 'src/app/service/prodotti.service';
 
 @Component({
   selector: 'app-dialog',
@@ -11,14 +15,18 @@ import { FattureService } from 'src/app/service/fatture.service';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-
+  clienti:CreaCliente[] = []
+  prodotti!:Prodotti[];
+  prodSelezionati:number[] = [];
   fatture:FatturaClass[] = []
   fattura!:FatturaClass
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   dataSource!: MatTableDataSource<FatturaClass>;
   isNew:boolean = true
   
-  constructor(private f:FattureService, public dialogRef:MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data:any) { }
+  constructor(private f:FattureService, public dialogRef:MatDialogRef<DialogComponent>, @Inject(MAT_DIALOG_DATA) public data:any,
+    private c:ClientiService,
+    private p:ProdottiService) { }
 
   ngOnInit(): void {
     console.log(this.data);
@@ -27,6 +35,10 @@ export class DialogComponent implements OnInit {
       this.dataSource= new MatTableDataSource(res)
       this.fatture = res
     })
+
+    this.c.getClienti().subscribe(res => this.clienti = res)
+    this.p.getAll()
+    .subscribe((res:Prodotti[]) => this.prodotti = res)
   }
 
   aggiornaCliente(fattura:FatturaClass){

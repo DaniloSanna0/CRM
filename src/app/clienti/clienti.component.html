@@ -7,7 +7,7 @@
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
 </mat-form-field>
 
-<button mat-raised-button id="crea" (click)="openDialog2()">Crea Cliente</button>
+<button mat-raised-button id="crea" (click)="openDialog2()">Crea Cliente <mat-icon>create_new_folder</mat-icon></button>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>

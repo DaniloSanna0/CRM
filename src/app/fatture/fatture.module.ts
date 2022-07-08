@@ -14,6 +14,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
 import { Dialog2Component } from './dialog2/dialog2.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +40,11 @@ MatSortModule,
 MatButtonModule,
 HttpClientModule,
 FormsModule,
-ReactiveFormsModule
+ReactiveFormsModule,
+MatCheckboxModule,
+MatSelectModule,
+MatDialogModule,
+MatMenuModule
   ]
 })
 export class FattureModule { }

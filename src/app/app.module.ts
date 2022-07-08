@@ -16,6 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
 import { AuthInterceptor } from './auth.interceptor';
+import {MatIconModule} from '@angular/material/icon';
+import { DialogComponent } from './section/footer/dialog/dialog.component';
 
 
 
@@ -25,7 +27,8 @@ import { AuthInterceptor } from './auth.interceptor';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { AuthInterceptor } from './auth.interceptor';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule
   ],
   providers: [
     {

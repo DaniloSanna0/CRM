@@ -1,48 +1,56 @@
 <h1 mat-dialog-title>Crea fattura</h1>
 <div mat-dialog-content *ngIf="fattura">
-    Crea una nuova fattura del cliente {{fattura.numeroFattura}}?
+    Crea una nuova fattura numero {{fattura.numeroFattura}}?
 </div>
 <form>
-  <input type="checkbox" name="pagata" [value]="fattura.pagata" [(ngModel)]="fattura.pagata">
-  <label for="vehicle1"> paga</label>
+  <!-- <input type="checkbox" name="pagata" [value]="fattura.pagata" [(ngModel)]="fattura.pagata">
+  <label for="vehicle1"> pagata</label> -->
+  <mat-checkbox class="example-margin" name="pagata" [(ngModel)]="fattura.pagata">Pagata</mat-checkbox>
 
-      <select required
+  <mat-form-field appearance="fill">
+    <mat-label>Cliente</mat-label>
+    <mat-select [(ngModel)]="fattura.clienteId" name="food" required>
+      <mat-option *ngFor="let cliente of clienti" [value]="cliente.id">
+        {{cliente.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+      <!-- <select required
       class="form-control"
       name="customer" [(ngModel)]="fattura.clienteId">
         <option value="">--Seleziona--</option>
         <option *ngFor="let cliente of clienti"
         [value]="cliente.id">{{cliente.nome}}</option>
-       </select>
+       </select> -->
 
-      <select
+       <mat-form-field appearance="fill">
+        <mat-label>Prodotti</mat-label>
+        <mat-select [(ngModel)]="fattura.prodotti"  name="prodotti" multiple required>
+          <mat-option *ngFor="let prod of prodotti" [value]="prod.id">{{prod.nome}} {{prod.prezzo | currency: "EUR" : "symbol"}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- <select
       class="form-control" multiple
       name="prodotti" [(ngModel)]="fattura.prodotti"
       >
         <option *ngFor="let prod of prodotti"
         [value]="prod.id">{{prod.nome}} {{prod.prezzo | currency: "EUR" : "symbol"}}</option>
-      </select>
-      <mat-form-field class="example-full-width" appearance="fill">
+      </select> -->
+
+      <!-- <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>id</mat-label>
-        <input matInput type="number" name="id" [(ngModel)]="fattura.id" [disabled]="true">
-      </mat-form-field>
-    <!-- <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>cliente</mat-label>
-        <input type="cliente" matInput name="cliente" placeholder="cliente" [(ngModel)]="fattura.cliente">
-    </mat-form-field> -->
-        <!-- <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>prodotti</mat-label>
-          <input matInput type="text" name="prodotti" placeholder="prodotti" [(ngModel)]="fattura.prodotti">
-        </mat-form-field> -->
+        <input matInput type="number" [value]="fattura.id" name="id" [(ngModel)]="fattura.id" [disabled]="true">
+      </mat-form-field> -->
+
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>scadenza</mat-label>
-          <input matInput type="date" name="scadenza" placeholder="scadenza" [(ngModel)]="fattura.scadenza">
+          <input matInput type="date" name="scadenza" placeholder="scadenza" [(ngModel)]="fattura.scadenza" required>
         </mat-form-field>
-        <!-- <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" [(ngModel)]="fattura.cognome">
-        </mat-form-field> -->
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="createCliente()">Crea</button>
+      <button mat-raised-button color="primary" (click)="createCliente()"
+      [disabled]="!fattura.scadenza || !fattura.prodotti || !fattura.clienteId">Crea</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>
 </form>

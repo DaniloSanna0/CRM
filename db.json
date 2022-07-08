@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "dsaew@ilinator.com",
-      "password": "$2a$10$XIpZTTjt0msZyKS56nLKluyDHPXiLtVTAZEpQbZI8ICQy6Zyi4mCu",
+      "password": "$2a$10$q8liOAlqbqE3qBFfy1y7HuwjkitPcOxaejkeG931v5g38DJs5HpT.",
       "nome": " con",
       "cognome": "it ",
       "date": "4/5/2022 11:19",
@@ -195,204 +195,271 @@
   ],
   "clienti": [
     {
-      "email": "hagunacocu@mailinator.com",
-      "password": "wylecory",
-      "nome": "Reiciendis assumenda",
-      "cognome": "Aliqua Do sit est",
-      "date": "1/6/2022 17:35",
-      "PIva": 5216008970,
-      "id": 1
+      "email": "volyzoca@mailinator.com",
+      "password": "razuwyqa",
+      "nome": "Et dolores qui culpa",
+      "cognome": "Voluptatem voluptas ",
+      "date": "4/6/2022 20:20",
+      "PIva": 1356347320,
+      "indirizzo": {
+        "via": "Aut quasi repellendu",
+        "citta": "Voluptatem ipsum a",
+        "cap": 213321,
+        "civico": 122121
+      },
+      "id": 16
     },
     {
-      "email": "zuqipeg@mailinator.com",
-      "password": "dorobecy",
-      "nome": "Laudantium sapiente",
-      "cognome": "Assumenda iste harum",
-      "date": "1/6/2022 17:35",
-      "PIva": 2157118121,
-      "id": 2
+      "email": "hygyto@mailinator.com",
+      "password": "pipucume",
+      "nome": "Eum eligendi illo ni",
+      "cognome": "Omnis assumenda aut ",
+      "date": "4/6/2022 20:27",
+      "PIva": 9924376176,
+      "indirizzo": {
+        "via": "Aut ullamco omnis qu",
+        "citta": "Sint omnis aut quos ",
+        "cap": 3212321,
+        "civico": 123123123
+      },
+      "id": 17
     },
     {
-      "email": "nona@mailinator.com",
-      "password": "vobecesi",
-      "nome": "Doloribus aut sunt o",
-      "cognome": "Elit iusto iure rep",
-      "date": "1/6/2022 17:36",
-      "PIva": 9380356447,
-      "id": 3
+      "email": "tofydoxu@mailinator.com",
+      "password": "bedogebo",
+      "nome": "Voluptatem ut dolore",
+      "cognome": "In quia rerum et qui",
+      "date": "4/6/2022 20:27",
+      "PIva": 9924376176,
+      "indirizzo": {
+        "via": "Quae cillum soluta d",
+        "citta": "In consequatur magna",
+        "cap": 4123213,
+        "civico": 3123123
+      },
+      "id": 18
     },
     {
-      "email": "gywybu@mailinator.com",
-      "password": "fywafufo",
-      "nome": "Dolore sit fuga Od",
-      "cognome": "Deserunt modi necess",
-      "date": "1/6/2022 17:36",
-      "PIva": 663347321,
-      "id": 4
+      "email": "pykeq@mailinator.com",
+      "password": "xoqavepu",
+      "nome": "Sint quibusdam sapie",
+      "cognome": "Voluptate quas non l",
+      "date": "4/6/2022 20:27",
+      "PIva": 9924376176,
+      "indirizzo": {
+        "via": "Sit in voluptatum n",
+        "citta": "Placeat cupidatat f",
+        "cap": 132231,
+        "civico": 312321
+      },
+      "id": 19
     },
     {
-      "email": "gyhotiti@mailinator.com",
-      "password": "nuqexopo",
-      "nome": "Ex voluptas officiis",
-      "cognome": "Non mollit pariatur",
-      "date": "1/6/2022 17:36",
-      "PIva": 906189642,
-      "id": 5
+      "email": "zuxu@mailinator.com",
+      "password": "hixifena",
+      "nome": "Recusandae Sint dic",
+      "cognome": "Corrupti odio ea oc",
+      "date": "4/6/2022 20:27",
+      "PIva": 4539053980,
+      "indirizzo": {
+        "via": "Non qui vitae molest",
+        "citta": "Accusantium nisi qui",
+        "cap": 3123,
+        "civico": 12312
+      },
+      "id": 20
     },
     {
-      "email": "pafuf@mailinator.com",
-      "password": "tiragyse",
-      "nome": "Sequi nihil optio q",
-      "cognome": "Magna non aliquam no",
-      "date": "1/6/2022 17:36",
-      "PIva": 5388992495,
-      "id": 6
+      "email": "wyradeb@mailinator.com",
+      "password": "zimawumo",
+      "nome": "Ut et ut dolor aute ",
+      "cognome": "Expedita alias quisq",
+      "date": "4/6/2022 20:27",
+      "PIva": 4539053980,
+      "indirizzo": {
+        "via": "Obcaecati enim minim",
+        "citta": "Qui expedita eu dolo",
+        "cap": 1212,
+        "civico": 2112
+      },
+      "id": 21
     },
     {
-      "email": "revyregij@mailinator.com",
-      "password": "zecuqifu",
-      "nome": "Repudiandae earum et",
-      "cognome": "Proident esse tempo",
-      "date": "1/6/2022 17:36",
-      "PIva": 8188586916,
-      "id": 8
+      "email": "zihibepeza@mailinator.com",
+      "password": "cipysuvu",
+      "nome": "Velit ut nisi corpo",
+      "cognome": "Ut quos ad reprehend",
+      "date": "4/6/2022 20:29",
+      "PIva": 646989179,
+      "indirizzo": {
+        "via": "Illo eligendi quam c",
+        "citta": "Placeat eligendi ei",
+        "cap": 1231223,
+        "civico": 321312
+      },
+      "id": 22
     },
     {
-      "email": "puzebyf@mailinator.com",
-      "password": "vixyfypu",
-      "nome": "Velit labore et dolo",
-      "cognome": "Assumenda dolore eaq",
-      "date": "1/6/2022 17:36",
-      "PIva": 3288163317,
-      "id": 9
+      "email": "tekulicit@mailinator.com",
+      "password": "siwulyvi",
+      "nome": "Esse autem temporib",
+      "cognome": "Incididunt temporibu",
+      "date": "4/6/2022 20:29",
+      "PIva": 646989179,
+      "indirizzo": {
+        "via": "Enim cupiditate nihi",
+        "citta": "Et ut odio mollit to",
+        "cap": 12313,
+        "civico": 12313
+      },
+      "id": 23
     },
     {
-      "email": "gexazonab@mailinator.com",
-      "password": "pujiveby",
-      "nome": "Esse est ipsum enim ",
-      "cognome": "Nam neque sit maxime",
-      "date": "3/6/2022 15:36",
-      "PIva": 7882162865,
-      "id": 10
+      "email": "keqa@mailinator.com",
+      "password": "fixemory",
+      "nome": "Sint sint iure inve",
+      "cognome": "Iure ut nobis est i",
+      "date": "4/6/2022 20:29",
+      "PIva": 646989179,
+      "indirizzo": {
+        "via": "Nemo nobis laudantiu",
+        "citta": "Et porro et inventor",
+        "cap": 123123,
+        "civico": 123213
+      },
+      "id": 24
     },
     {
-      "email": "xolak@mailinator.com",
-      "password": "qygyjubo",
-      "nome": "Possimus quae irure",
-      "cognome": "Magna consequuntur l",
-      "date": "3/6/2022 22:55",
-      "PIva": 3477014519,
-      "id": 11
+      "email": "cacyt@mailinator.com",
+      "password": "mivijafy",
+      "nome": "Excepteur ullam mini",
+      "cognome": "Amet nulla quia rer",
+      "date": "4/6/2022 20:29",
+      "PIva": 646989179,
+      "indirizzo": {
+        "via": "Culpa quia quis ut ",
+        "citta": "Iure totam suscipit ",
+        "cap": 321123,
+        "civico": 123312
+      },
+      "id": 25
     },
     {
-      "email": "jaqupet@mailinator.com",
-      "password": "sabovawe",
-      "nome": "Modi ad commodi null",
-      "cognome": "Voluptas sunt sed la",
-      "date": "3/6/2022 22:56",
-      "PIva": 4416276420,
-      "id": 12
+      "email": "zavi@mailinator.com",
+      "password": "jexobipy",
+      "nome": "Nisi nobis qui nihil",
+      "cognome": "Nulla laboris magni ",
+      "date": "4/6/2022 20:29",
+      "PIva": 646989179,
+      "indirizzo": {
+        "via": "Consectetur non aliq",
+        "citta": "Suscipit eligendi ma",
+        "cap": 12331,
+        "civico": 312312
+      },
+      "id": 26
     },
     {
-      "email": "wamyti@mailinator.com",
-      "password": "gudazyce",
-      "nome": "Ut officia accusamus",
-      "cognome": "Voluptatem Do volup",
-      "date": "3/6/2022 22:56",
-      "PIva": 2247912305,
-      "id": 13
+      "email": "byqagyxufa@mailinator.com",
+      "password": "xevucewu",
+      "nome": "Vel itaque mollit qu",
+      "cognome": "Ipsum ut enim ut to",
+      "date": "4/6/2022 22:48",
+      "PIva": 6407938755,
+      "indirizzo": {
+        "via": "Qui excepturi accusa",
+        "citta": "In itaque dolores do",
+        "cap": 34,
+        "civico": 86
+      },
+      "id": 27
+    },
+    {
+      "email": "sa",
+      "password": "",
+      "nome": "",
+      "cognome": "",
+      "date": "5/6/2022 12:31",
+      "PIva": 2355635955,
+      "indirizzo": {
+        "via": "",
+        "citta": "",
+        "cap": "",
+        "civico": ""
+      },
+      "id": 28
+    },
+    {
+      "email": "",
+      "password": "",
+      "nome": "",
+      "cognome": "",
+      "date": "5/6/2022 12:41",
+      "PIva": 696675796,
+      "indirizzo": {
+        "via": "",
+        "citta": "",
+        "cap": "",
+        "civico": ""
+      },
+      "id": 29
     }
   ],
   "fatture": [
     {
       "data_emissione": "7/7/2022",
-      "numeroFattura": "DS933948",
-      "IVA": "22%",
-      "prodotti": [
-        2
-      ],
-      "id": 8
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS403547",
-      "IVA": "22%",
-      "prodotti": [
-        3
-      ],
-      "id": 9
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS713286",
-      "IVA": "22%",
-      "clienteId": "4",
-      "id": 10
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS685973",
-      "IVA": "22%",
-      "clienteId": "10",
-      "prodotti": [
-        3
-      ],
-      "scadenza": "2022-07-19",
-      "id": 11
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS236063",
-      "IVA": "22%",
-      "id": 12
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS641033",
-      "IVA": "22%",
-      "pagata": true,
-      "id": 13
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS256946",
-      "IVA": "22%",
-      "id": 14
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS67834",
+      "numeroFattura": "DS776015",
       "IVA": "22%",
       "pagata": false,
-      "id": 15
+      "clienteId": 17,
+      "prodotti": [
+        2,
+        3,
+        4
+      ],
+      "scadenza": "2022-07-20",
+      "id": 33
     },
     {
       "data_emissione": "7/7/2022",
-      "numeroFattura": "DS996480",
-      "IVA": "22%",
-      "pagata": false,
-      "id": 16
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS461825",
-      "IVA": "22%",
-      "pagata": true,
-      "id": 17
-    },
-    {
-      "data_emissione": "7/7/2022",
-      "numeroFattura": "DS609659",
+      "numeroFattura": "DS635002",
       "IVA": "22%",
       "pagata": true,
-      "id": 18
+      "clienteId": 19,
+      "prodotti": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scadenza": "2022-07-15",
+      "id": 34
     },
     {
       "data_emissione": "7/7/2022",
-      "numeroFattura": "DS748291",
+      "numeroFattura": "DS30127",
       "IVA": "22%",
       "pagata": false,
-      "id": 19
+      "scadenza": "2023-10-05",
+      "clienteId": 26,
+      "prodotti": [
+        4
+      ],
+      "id": 35
+    },
+    {
+      "data_emissione": "7/7/2022",
+      "numeroFattura": "DS230907",
+      "IVA": "22%",
+      "pagata": true,
+      "clienteId": 25,
+      "prodotti": [
+        2,
+        4
+      ],
+      "scadenza": "2022-07-16",
+      "id": 37
     }
   ],
   "prodotti": [

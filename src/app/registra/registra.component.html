@@ -17,13 +17,13 @@
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Nome</mat-label>
-          <input matInput type="name" name="nome" placeholder="nome" formControlName="nome">
+          <input matInput type="text" name="nome" placeholder="nome" formControlName="nome">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Cognome</mat-label>
-          <input matInput type="surname" name="cognome" placeholder="cognome" formControlName="cognome">
+          <input matInput type="text" name="cognome" placeholder="cognome" formControlName="cognome">
         </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Registrati</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Registrati</button>
 </form>
 </td>
 
@@ -37,7 +37,7 @@
 <form>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Email</mat-label>
-        <input type="email" name="email" placeholder="email" [(ngModel)]="authUser.email" matInput>
+        <input type="email" name="email" placeholder="email" [(ngModel)]="authUser.email" matInput required>
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
           Please enter a valid email address
         </mat-error>
@@ -47,9 +47,10 @@
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput type="password" name="password" placeholder="password" [(ngModel)]="authUser.password">
+        <input matInput type="password" name="password" placeholder="password" [(ngModel)]="authUser.password" required>
       </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" (click)="login()">Login</button>
+    <button mat-raised-button color="primary" type="submit" (click)="login()"
+    [disabled]="!authUser.email || !authUser.password || authUser.password.lenght < 4">Login</button>
 </form>
 </td>
 </tr></table>

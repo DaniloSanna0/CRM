@@ -1,3 +1,4 @@
+import { AddressClass } from "./address-class";
 import { Utente } from "./utente"
 
 let ciao =  `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}`
@@ -11,6 +12,7 @@ export class CreaCliente implements Utente{
     cognome!:string;
     date!:any;
     PIva!:any;
+    indirizzo:AddressClass
 
     
     constructor( 
@@ -19,8 +21,9 @@ export class CreaCliente implements Utente{
             this.password= '';
             this.nome= '';
             this.cognome= '';
-            this.date= ciao
-            this.PIva = getRandomInt(10000000000)
+            this.date= ciao;
+            this.PIva = getRandomInt(10000000000);
+            this.indirizzo = new AddressClass()
         }
         
     }

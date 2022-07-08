@@ -7,6 +7,8 @@ import { Dialog2Component } from './dialog2/dialog2.component';
 import { MatDialog } from '@angular/material/dialog';
 import { FattureService } from '../service/fatture.service';
 import { FatturaClass } from '../interface/fattura-class';
+import { ClientiService } from '../service/clienti.service';
+import { CreaCliente } from '../interface/crea-cliente';
 
 
 @Component({
@@ -15,29 +17,30 @@ import { FatturaClass } from '../interface/fattura-class';
   styleUrls: ['./fatture.component.scss']
 })
 export class FattureComponent implements OnInit {
-
-  displayedColumns: string[] = ['id', 'numeroFattura', 'prodotti', 'scadenza', 'data','pulsante'];
+  clienti:CreaCliente[] = []
+  displayedColumns: string[] = ['id', 'cliente', 'numeroFattura', 'prodotti', 'scadenza', 'data', 'pagata', 'pulsante', ];
   fatture:FatturaClass[]=[]
   dataSource!: MatTableDataSource<FatturaClass>;
   fattura!:FatturaClass
-
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   
-  constructor(private dialog: MatDialog, private f:FattureService) { }
+  constructor(private dialog: MatDialog,
+              private f:FattureService,
+              private c:ClientiService) { }
   
   openDialog(fattura:FatturaClass): void {
     console.log(fattura);
 
     this.dialog.open(DialogComponent ,{
       data: fattura,
-      width: '500px'
+      width: '470px'
     });
   }
   openDialog2(): void {
     console.log();
     this.dialog.open(Dialog2Component ,{
-      width: '500px'
+      width: '470px'
     });
   }
 
@@ -52,6 +55,7 @@ export class FattureComponent implements OnInit {
 
   ngOnInit(): void {
     this.visualizzaClienti();
+    this.c.getClienti().subscribe(res => this.clienti = res)
   }
 
   createCliente(fattura:FatturaClass){

@@ -41,6 +41,5 @@ export class DialogComponent implements OnInit {
       this.dataSource= new MatTableDataSource(this.users)
 
     })
-    }
-  
+  }
 }
