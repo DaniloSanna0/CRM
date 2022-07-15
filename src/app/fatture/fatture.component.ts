@@ -44,18 +44,31 @@ export class FattureComponent implements OnInit {
     });
   }
 
-  visualizzaClienti(){
-    this.f.getFatture().subscribe(res => {
-      this.dataSource= new MatTableDataSource(res)
-      this.fatture = res
+  visualizzaFatture(){
+    this.c.getClienti().subscribe(resClienti => {
+
+    this.f.getFatture().subscribe(resFatture => {
+      resFatture = resFatture.map(f => {
+        let user = resClienti.find((c:CreaCliente) => c.id == f.clienteId)
+        if (user){
+          f.clienteInfo = user
+        }
+        return f
+      })
+    this.dataSource= new MatTableDataSource(resFatture)
+  
+      this.fatture = resFatture
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      
+        this.clienti = resClienti
+      })
     })
   }
 
   ngOnInit(): void {
-    this.visualizzaClienti();
-    this.c.getClienti().subscribe(res => this.clienti = res)
+    this.visualizzaFatture();
+   
   }
 
   createCliente(fattura:FatturaClass){

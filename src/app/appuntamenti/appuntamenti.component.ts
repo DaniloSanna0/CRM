@@ -1,31 +1,79 @@
-import { Component, OnInit } from '@angular/core';
-import { Appuntamenti } from '../interface/appuntamenti';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppuntamentiService } from '../service/appuntamenti.service';
+import { CalendarOptions, FullCalendarComponent } from '@fullcalendar/angular'; // useful for typechecking
+import timeGridPlugin from '@fullcalendar/timegrid';
+import { Appuntamenti } from '../interface/appuntamenti';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+
+
+
 
 @Component({
   selector: 'app-appuntamenti',
   templateUrl: './appuntamenti.component.html',
   styleUrls: ['./appuntamenti.component.scss']
 })
+
 export class AppuntamentiComponent implements OnInit {
-  selected!: Date | null;
-  appuntamenti:any[]=[]
-  appuntamento:any = new Appuntamenti()
+  appuntamento!:Appuntamenti
+  
+  @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
 
-  // myFilter = (d: Date | null): boolean => {
-  //   const day = (d || new Date()).getDay();
-  //   // Prevent Saturday and Sunday from being selected.
-  //   return day !== 0 && day !== 6;
-  // };
+  constructor(private dialog: MatDialog, private a:AppuntamentiService) {}
 
-  constructor(private a:AppuntamentiService) { }
-
-  creaAppuntamento(){
-    this.a.createAppuntamenti(this.selected).subscribe(res => this.appuntamenti)
-  }
-
+  
+  
   ngOnInit(): void {
-    this.a.getAppuntamenti().subscribe(res => this.appuntamenti)
+    this.a.getAppuntamenti().subscribe(res => this.calendarOptions= {
+      plugins: [ timeGridPlugin ],
+      timeZone: 'UTC',
+      initialView: 'dayGridMonth',
+      selectable: true,
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+      },
+      dateClick: ()=> {
+        console.log('caio');
+        this.handleDateClick.bind(this)
+        this.openDialog(this.appuntamento)
+      },
+      select: info => {
+        console.log(info);
+        
+        this.dialog.open(DialogComponent ,{
+          data: info,
+          width: '500px'
+        })
+        },
+      events: res
+    });
+  }
+  
+  calendarOptions!: CalendarOptions
+  
+  handleDateClick(arg: { dateStr: string; }) {
+    alert('date click! ' + arg.dateStr)
   }
 
+  openDialog(appuntamento: Appuntamenti): void {
+    console.log(appuntamento);
+
+    this.dialog.open(DialogComponent ,{
+      data: appuntamento,
+      width: '500px'
+    });
+  }
+  openDialog2(): void {
+    console.log();
+
+    this.dialog.open(DialogComponent ,{
+      width: '500px'
+    });
+  }
+
+  
+  
 }

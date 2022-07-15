@@ -1,7 +1,5 @@
 import { Utente } from "./utente"
 
-let ciao =  `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}`
-
 export class ClassePrincipale implements Utente{
     
     id: number;
@@ -24,7 +22,7 @@ export class ClassePrincipale implements Utente{
         this.password=password
         this.nome=nome
         this.cognome=cognome
-        this.date= ciao
+        this.date= new Date().toLocaleDateString();
     }
 
 }

@@ -38,6 +38,8 @@ export class DialogComponent implements OnInit {
       let index = this.clienti.findIndex(cliente => cliente.id == res.id)
       this.clienti.splice(index,1,res)
       this.dataSource= new MatTableDataSource(this.clienti)
+      
+    // this.clienti.push(cliente)
     })
     }
 

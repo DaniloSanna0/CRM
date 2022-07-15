@@ -18,8 +18,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AuthInterceptor } from './auth.interceptor';
 import {MatIconModule} from '@angular/material/icon';
 import { DialogComponent } from './section/footer/dialog/dialog.component';
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 
 
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
 
 
 
@@ -42,7 +49,8 @@ import { DialogComponent } from './section/footer/dialog/dialog.component';
     MatInputModule,
     MatFormFieldModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    FullCalendarModule
   ],
   providers: [
     {

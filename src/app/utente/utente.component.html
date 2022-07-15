@@ -39,7 +39,7 @@
     <ng-container matColumnDef="pulsante">
       <th mat-header-cell *matHeaderCellDef> Azioni </th>
       <td mat-cell *matCellDef="let users">
-        <button mat-raised-button mat-mini-fab color="primary" (click)="openDialog(users)"><mat-icon>edit</mat-icon></button>
+        <button mat-raised-button mat-mini-fab id="modifica" (click)="openDialog(users)"><mat-icon>edit</mat-icon></button>
         <button mat-raised-button mat-mini-fab color="warn" (click)="delte(users.id)"><mat-icon>delete</mat-icon></button>
 
       </td>

@@ -41,7 +41,7 @@
       <ng-container matColumnDef="pulsante">
         <th mat-header-cell *matHeaderCellDef> Azioni </th>
         <td mat-cell *matCellDef="let clienti">
-          <button mat-raised-button mat-mini-fab color="primary" (click)="openDialog(clienti)"><mat-icon>edit</mat-icon></button>
+          <button mat-raised-button mat-mini-fab id="modifica" color="primary" (click)="openDialog(clienti)"><mat-icon>edit</mat-icon></button>
           <button mat-raised-button mat-mini-fab color="warn" (click)="delte(clienti.id)"><mat-icon>delete</mat-icon></button>
   
         </td>

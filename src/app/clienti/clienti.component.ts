@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CreaCliente } from '../interface/crea-cliente';
-import { Utente } from '../interface/utente';
 import { ClientiService } from '../service/clienti.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { Dialog2Component } from './dialog2/dialog2.component';
@@ -18,7 +17,7 @@ export class ClientiComponent implements OnInit {
   displayedColumns: string[] = ['id', 'email', 'nome', 'cognome','PIva','pulsante'];
   clienti:CreaCliente[]=[]
   dataSource!: MatTableDataSource<CreaCliente>;
-  cliente!:CreaCliente
+  // cliente!:CreaCliente
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -51,6 +50,9 @@ export class ClientiComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.c.clientiOBS.subscribe(res => this.visualizzaClienti())
+
     this.visualizzaClienti();
   }
 

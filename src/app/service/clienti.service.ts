@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { CreaCliente } from '../interface/crea-cliente';
 import { Utente } from '../interface/utente';
 
@@ -11,6 +12,10 @@ export class ClientiService {
   constructor(private http : HttpClient) { }
 
   ApiUrlC:string = 'http://localhost:4201/clienti'
+
+  clientiSBJ = new BehaviorSubject<boolean | null>(null)
+
+  clientiOBS = this.clientiSBJ.asObservable()
 
   createCliente(cliente:CreaCliente) {
     return this.http.post<CreaCliente>(this.ApiUrlC, cliente)

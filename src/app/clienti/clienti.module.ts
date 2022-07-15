@@ -16,6 +16,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { Dialog2Component } from './dialog2/dialog2.component';
 
 
+
 @NgModule({
   declarations: [
     ClientiComponent,

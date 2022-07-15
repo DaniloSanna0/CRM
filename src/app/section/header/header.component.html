@@ -1,7 +1,7 @@
 <header>
   <ul>
     <!-- <li><a [routerLink]="['/']">Home</a></li> -->
-    <li><a [routerLink]="['/utente']" *ngIf="userLogged">Utente</a>
+    <li><a [routerLink]="['/utente']" *ngIf="userLogged">Utenti</a>
       <!-- <ul class="dropdown">
       <li><a href="#">Fatture</a></li>
       <li><a href="#">Appuntamenti</a></li>
@@ -11,8 +11,8 @@
     <li><a [routerLink]="['/clienti']" *ngIf="userLogged">Clienti</a>
     <li><a [routerLink]="['/fatture']" *ngIf="userLogged">Fatture</a>
     <li><a [routerLink]="['/appuntamenti']" *ngIf="userLogged">Appuntamenti</a>
-    <li><a [routerLink]="['/registra']" *ngIf="!userLogged">Registrati</a>
+    <li><a [routerLink]="['']" *ngIf="!userLogged">Login</a>
     </li>
   </ul>
 </header>
-<span><button mat-raised-button (click)="logout()">Logout</button></span>
+<span><button mat-raised-button (click)="logout()">Logout <mat-icon>exit_to_app</mat-icon></button></span>

@@ -1,13 +1,15 @@
+import { CreaCliente } from "./crea-cliente";
 
 export class FatturaClass {
     id!:number;
-    clienteId!:string;
+    clienteId!:number;
     numeroFattura:string;
     prodotti!:string;
     scadenza!:Date;
     data_emissione:string;
     IVA:string;
-    pagata!:boolean
+    pagata!:boolean;
+    clienteInfo!:CreaCliente
     constructor()
         {
          this.data_emissione = new Date().toLocaleDateString();

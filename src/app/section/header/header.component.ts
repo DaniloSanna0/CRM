@@ -23,6 +23,6 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     this.log.logout();
-    this.route.navigate(['/registra'])
+    this.route.navigate([''])
   }
 }

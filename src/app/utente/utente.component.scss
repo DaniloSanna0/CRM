@@ -1,3 +1,4 @@
+// $giallo: #ffc800;
 
 .example-card {
     max-width: 400px;
@@ -19,4 +20,8 @@ button {
 .mat-elevation-z8{
   width: 90%;
   margin: 0 auto;
+}
+
+#modifica{
+  background-color: var(--giallo);
 }

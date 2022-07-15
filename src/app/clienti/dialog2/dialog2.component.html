@@ -45,10 +45,10 @@
           <mat-label>CAP</mat-label>
           <input matInput type="number" name="cap" placeholder="cap" [(ngModel)]="cliente.indirizzo.cap" required>
         </mat-form-field>
-        <span mat-dialog-actions>
+        <div mat-dialog-actions>
       <button mat-raised-button color="primary" (click)="createCliente()"
       [disabled]="!cliente.nome || !cliente.cognome || !cliente.password || !cliente.email || cliente.nome.length < 3 || cliente.password.length < 4 
       || !cliente.indirizzo.citta || !cliente.indirizzo.via || !cliente.indirizzo.civico || !cliente.indirizzo.cap">Crea</button>
       <button mat-button mat-dialog-close>Chiudi</button>
-    </span>
+        </div>
 </form>
