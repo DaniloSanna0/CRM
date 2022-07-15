@@ -6,7 +6,7 @@ import { Utente } from '../interface/utente';
 
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class ClientiService {
 
   constructor(private http : HttpClient) { }

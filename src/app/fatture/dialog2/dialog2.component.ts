@@ -36,7 +36,9 @@ export class Dialog2Component implements OnInit {
     .subscribe((res:Prodotti[]) => this.prodotti = res)
   }
 
-  createCliente(){
+  createFatture(){
+    this.c.clientiSBJ.next(true)
+
     this.f.createFatture(this.fattura)
     .subscribe(res => this.fatture
       )

@@ -25,6 +25,8 @@ export class DialogComponent implements OnInit {
   }
   
   createAppuntamento(){
+    this.a.clientiSBJ.next(true)
+
     this.a.createAppuntamenti(this.appuntamento).subscribe(res => console.log(res)
     )
   }

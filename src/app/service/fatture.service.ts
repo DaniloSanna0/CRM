@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { FatturaClass } from '../interface/fattura-class';
 
 @Injectable({
@@ -10,6 +11,10 @@ export class FattureService {
   constructor(private http : HttpClient) { }
 
   ApiUrlC:string = 'http://localhost:4201/fatture'
+
+  clientiSBJ = new BehaviorSubject<boolean | null>(null)
+
+  clientiOBS = this.clientiSBJ.asObservable()
 
   createFatture(fattura:FatturaClass) {
     return this.http.post<FatturaClass>(this.ApiUrlC, fattura)

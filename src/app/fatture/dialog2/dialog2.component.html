@@ -49,7 +49,7 @@
           <input matInput type="date" name="scadenza" placeholder="scadenza" [(ngModel)]="fattura.scadenza" required>
         </mat-form-field>
         <span mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="createCliente()"
+      <button mat-raised-button color="primary" (click)="createFatture()"
       [disabled]="!fattura.scadenza || !fattura.prodotti || !fattura.clienteId">Crea</button>
       <button mat-button mat-dialog-close>Chiudi</button>
     </span>

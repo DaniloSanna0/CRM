@@ -67,6 +67,9 @@ export class FattureComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.c.clientiOBS.subscribe(res => this.visualizzaFatture())
+
     this.visualizzaFatture();
    
   }

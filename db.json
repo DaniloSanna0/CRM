@@ -638,6 +638,57 @@
       "scadenza": "2022-07-29",
       "clienteId": 23,
       "id": 39
+    },
+    {
+      "data_emissione": "15/7/2022",
+      "numeroFattura": "DS414406",
+      "IVA": "22%",
+      "pagata": true,
+      "scadenza": "2014-08-28",
+      "clienteId": 21,
+      "prodotti": [
+        1,
+        5
+      ],
+      "id": 41
+    },
+    {
+      "data_emissione": "15/7/2022",
+      "numeroFattura": "DS678797",
+      "IVA": "22%",
+      "pagata": true,
+      "scadenza": "1972-04-15",
+      "clienteId": 21,
+      "prodotti": [
+        3,
+        4
+      ],
+      "id": 42
+    },
+    {
+      "data_emissione": "15/7/2022",
+      "numeroFattura": "DS977449",
+      "IVA": "22%",
+      "pagata": false,
+      "scadenza": "2014-10-14",
+      "clienteId": 21,
+      "prodotti": [
+        2
+      ],
+      "id": 43
+    },
+    {
+      "data_emissione": "15/7/2022",
+      "numeroFattura": "DS963060",
+      "IVA": "22%",
+      "pagata": false,
+      "scadenza": "1975-08-28",
+      "clienteId": 19,
+      "prodotti": [
+        3,
+        4
+      ],
+      "id": 44
     }
   ],
   "prodotti": [
@@ -691,6 +742,30 @@
       "start": "2022-07-17",
       "end": "2022-07-21",
       "id": 4
+    },
+    {
+      "title": "prova x",
+      "start": "2022-06-28",
+      "end": "2022-07-01",
+      "id": 5
+    },
+    {
+      "title": "sda",
+      "start": "2022-07-25",
+      "end": "2022-07-26",
+      "id": 6
+    },
+    {
+      "title": "sa",
+      "start": "2022-07-27",
+      "end": "2022-07-29",
+      "id": 7
+    },
+    {
+      "title": "dote",
+      "start": "2022-06-28",
+      "end": "2022-07-01",
+      "id": 8
     }
   ]
 }

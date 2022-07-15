@@ -22,9 +22,7 @@ export class AppuntamentiComponent implements OnInit {
 
   constructor(private dialog: MatDialog, private a:AppuntamentiService) {}
 
-  
-  
-  ngOnInit(): void {
+  visualizzaAppuntamenti(){
     this.a.getAppuntamenti().subscribe(res => this.calendarOptions= {
       plugins: [ timeGridPlugin ],
       timeZone: 'UTC',
@@ -50,6 +48,15 @@ export class AppuntamentiComponent implements OnInit {
         },
       events: res
     });
+
+  }
+  
+  ngOnInit(): void {
+
+    this.a.clientiOBS.subscribe(res => this.visualizzaAppuntamenti())
+
+    this.visualizzaAppuntamenti()
+   
   }
   
   calendarOptions!: CalendarOptions
