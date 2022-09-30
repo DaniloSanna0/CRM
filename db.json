@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "email": "dsaew@ilinator.com",
-      "password": "$2a$10$q8liOAlqbqE3qBFfy1y7HuwjkitPcOxaejkeG931v5g38DJs5HpT.",
+      "email": "d@ilinator.com",
+      "password": "$2a$10$XLbn4dLrf0kJdwy0V.IROO0GqxGFa/tSfvlr6vltFvNr6M/flRj8u",
       "nome": " con",
       "cognome": "it ",
       "date": "4/5/2022 11:19",
@@ -31,14 +31,6 @@
       "cognome": "Cupidatat ad repudia",
       "date": "3/5/2022 17:6",
       "id": 18
-    },
-    {
-      "email": "civin@mailinator.com",
-      "password": "$2a$10$2QesM2gSm8vcHSKbJT8vMeJfRsxs0dh4493AfMw5XMp1AMM9WqDxG",
-      "nome": "Sint nihil quisquam",
-      "cognome": "Fugit itaque volupt",
-      "date": "3/5/2022 18:17",
-      "id": 19
     },
     {
       "email": "timab@mailinator.com",
@@ -191,6 +183,14 @@
       "cognome": "gunno",
       "date": "1/6/2022 9:39",
       "id": 39
+    },
+    {
+      "email": "Danilo@gmail.com",
+      "password": "$2a$10$eG6EGyJxF46u1b0tx8A7feCT1TCIOx.jChUgiRF15jN1RuASrUlbu",
+      "nome": "Danilo",
+      "cognome": "Sanna",
+      "date": "30/9/2022",
+      "id": 40
     }
   ],
   "clienti": [
@@ -766,6 +766,24 @@
       "start": "2022-06-28",
       "end": "2022-07-01",
       "id": 8
+    },
+    {
+      "title": "epicode",
+      "start": "2022-09-12",
+      "end": "2022-09-16",
+      "id": 9
+    },
+    {
+      "title": "epicode",
+      "start": "2022-09-12",
+      "end": "2022-09-16",
+      "id": 10
+    },
+    {
+      "title": "colloquio",
+      "start": "2022-09-05",
+      "end": "2022-09-08",
+      "id": 11
     }
   ]
 }

@@ -36,7 +36,6 @@ export class AppuntamentiComponent implements OnInit {
       dateClick: ()=> {
         console.log('caio');
         this.handleDateClick.bind(this)
-        this.openDialog(this.appuntamento)
       },
       select: info => {
         console.log(info);
